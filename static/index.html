@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Presentation Tool</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <style>
+            #container {
+                height: 100vh;
+                width: 100vw;
+                background-color: bisque;
+            }
+
+            #button_container {
+                padding-top: 40vh;
+                text-align: center;
+            }
+
+            .button_img {
+                display: inline-block;
+                width: 40%;
+                height: auto;
+            }
+            
+            @keyframes falling_k1 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+                to { top: 1000px;   opacity: 0.0; width: 30px; transform: rotate(-30deg); }
+            }
+            @keyframes falling_k2 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg);}
+                to { top: 750px;    opacity: 0.0; width: 30px; transform: rotate(30deg); }
+            }
+            @keyframes falling_k3 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+                to { top: 900px;    opacity: 0.0; width: 30px; transform: rotate(-20deg); }
+            }
+            @keyframes falling_k4 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+                to { top: 820px;    opacity: 0.0; width: 30px; transform: rotate(20deg); }
+            }
+            @keyframes falling_k5 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+                to { top: 1200px;   opacity: 0.0; width: 30px; transform: rotate(-40deg); }
+            }
+            @keyframes falling_k6 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+                to { top: 690px;    opacity: 0.0; width: 30px; transform: rotate(40deg); }
+            }
+            @keyframes falling_k7 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+                to { top: 1120px;   opacity: 0.0; width: 30px; transform: rotate(-50deg); }
+            }
+            @keyframes falling_k8 {
+                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+                to { top: 992px;    opacity: 0.0; width: 30px; transform: rotate(50deg); }
+            }
+
+            .temp_img {
+                position: absolute;
+                top: -100px;
+                width: 50px;
+                opacity: 0.9;
+                transform: rotate(0deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container" class="container-fluid">
+            <div class="row">
+                <div class="col-sm-1 col-md-2 col-lg-4"></div>
+                <div class="col-sm-10 col-md-8 col-lg-4">
+                    <div id="button_container">
+                        <img id="like_button" class='button_img' src="assets/like.svg">
+                        <img id="love_button" class='button_img' src="assets/love.svg">
+                    </div>
+                </div>
+                <div class="col-sm-1 col-md-2 col-lg-4"></div>
+            </div>
+            
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                function sendButtonPress(img) {
+                    $.ajax({
+                        method: 'GET',
+                        url: '/button_pressed',
+                        data: {
+                            image: img
+                        } 
+                    })
+                }
+                $("#like_button").click(() => { sendButtonPress("like") });
+
+                $("#love_button").click(() => { sendButtonPress("love") });
+            });
+        </script>
+        <script>
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+
+            function clearTempImgs() {
+                $(".temp_img").remove();
+            }
+
+            function placeTempImgs(queue) {
+                console.log("queue len: " + queue.length)
+                let container = $('#container');
+
+                for (let image of queue) {
+                    for (let i = 0; i < 10; i++) {
+                        let top_val = getRandomInt(150)
+                        let left_val = getRandomInt(container.width())
+                        let falling_anim = getRandomInt(7) + 1
+                        let anim_duration = getRandomInt(2) + 3
+                        console.log(falling_anim)
+
+                        container.append(`<img class='temp_img' style='left: ${left_val}px; animation: falling_k${falling_anim} ${anim_duration}s;' src='assets/${image}.svg'>`);
+                    }
+                }
+                
+            }
+
+            setInterval(function(){ 
+                $.ajax({
+                    method: 'GET',
+                    url: '/poll_for_reactions'
+                })
+                .done((data) => {
+                    console.log(data);
+                    clearTempImgs();
+                    placeTempImgs(data);
+                })
+                .fail((err) => {
+                    console.log("ERROR");
+                    console.log(err);
+                })
+
+                //  
+            }, 5000);
+        </script>
+    </body>
+</html>
