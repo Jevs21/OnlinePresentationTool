@@ -40,13 +40,13 @@ $(document).ready(function () {
                 break;
             }
             exit_i++;
-            for (let i = 0; i < 5; i++) { // 5 random
+            for (let i = 0; i < 3; i++) { // 3 random
                 container.append(generateTempImg(img_num, image, container.width()))
             }
-            for (let i = 0; i < 5; i++) { // 5 in left 300px
+            for (let i = 0; i < 3; i++) { // 3 in left 300px
                 container.append(generateTempImg(img_num, image, container.width(), "left"))
             }
-            for (let i = 0; i < 5; i++) { // 5 in right 300px
+            for (let i = 0; i < 3; i++) { // 3 in right 300px
                 container.append(generateTempImg(img_num, image, container.width(), "right"))
             }
         }
