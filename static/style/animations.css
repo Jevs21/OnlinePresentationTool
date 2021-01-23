@@ -1,0 +1,274 @@
+/* Animations to be assigned randomly */
+/* @keyframes falling_k1 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1000px;   opacity: 0.0; width: 30px; transform: rotate(-30deg); }
+}
+@keyframes falling_k2 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg);}
+    to { top: 750px;    opacity: 0.0; width: 30px; transform: rotate(30deg); }
+}
+@keyframes falling_k3 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 900px;    opacity: 0.0; width: 30px; transform: rotate(-20deg); }
+}
+@keyframes falling_k4 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 820px;    opacity: 0.0; width: 30px; transform: rotate(20deg); }
+}
+@keyframes falling_k5 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1200px;   opacity: 0.0; width: 30px; transform: rotate(-40deg); }
+}
+@keyframes falling_k6 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 690px;    opacity: 0.0; width: 30px; transform: rotate(40deg); }
+}
+@keyframes falling_k7 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1120px;   opacity: 0.0; width: 30px; transform: rotate(-50deg); }
+}
+@keyframes falling_k8 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 992px;    opacity: 0.0; width: 30px; transform: rotate(50deg); }
+} */
+
+@keyframes falling_0 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 964px; opacity: 0.0; width: 30px; transform: rotate(57deg); }
+}
+@keyframes falling_1 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1352px; opacity: 0.0; width: 30px; transform: rotate(19deg); }
+}
+@keyframes falling_2 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 916px; opacity: 0.0; width: 30px; transform: rotate(-49deg); }
+}
+@keyframes falling_3 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1090px; opacity: 0.0; width: 30px; transform: rotate(42deg); }
+}
+@keyframes falling_4 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 836px; opacity: 0.0; width: 30px; transform: rotate(52deg); }
+}
+@keyframes falling_5 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 919px; opacity: 0.0; width: 30px; transform: rotate(36deg); }
+}
+@keyframes falling_6 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1391px; opacity: 0.0; width: 30px; transform: rotate(78deg); }
+}
+@keyframes falling_7 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 771px; opacity: 0.0; width: 30px; transform: rotate(53deg); }
+}
+@keyframes falling_8 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 949px; opacity: 0.0; width: 30px; transform: rotate(46deg); }
+}
+@keyframes falling_9 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 778px; opacity: 0.0; width: 30px; transform: rotate(-38deg); }
+}
+@keyframes falling_10 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 848px; opacity: 0.0; width: 30px; transform: rotate(50deg); }
+}
+@keyframes falling_11 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1153px; opacity: 0.0; width: 30px; transform: rotate(35deg); }
+}
+@keyframes falling_12 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1262px; opacity: 0.0; width: 30px; transform: rotate(46deg); }
+}
+@keyframes falling_13 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1164px; opacity: 0.0; width: 30px; transform: rotate(-50deg); }
+}
+@keyframes falling_14 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1278px; opacity: 0.0; width: 30px; transform: rotate(28deg); }
+}
+@keyframes falling_15 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 933px; opacity: 0.0; width: 30px; transform: rotate(59deg); }
+}
+@keyframes falling_16 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1394px; opacity: 0.0; width: 30px; transform: rotate(-12deg); }
+}
+@keyframes falling_17 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1059px; opacity: 0.0; width: 30px; transform: rotate(66deg); }
+}
+@keyframes falling_18 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 882px; opacity: 0.0; width: 30px; transform: rotate(32deg); }
+}
+@keyframes falling_19 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1160px; opacity: 0.0; width: 30px; transform: rotate(32deg); }
+}
+@keyframes falling_20 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1133px; opacity: 0.0; width: 30px; transform: rotate(17deg); }
+}
+@keyframes falling_21 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1149px; opacity: 0.0; width: 30px; transform: rotate(-26deg); }
+}
+@keyframes falling_22 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1087px; opacity: 0.0; width: 30px; transform: rotate(61deg); }
+}
+@keyframes falling_23 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1307px; opacity: 0.0; width: 30px; transform: rotate(23deg); }
+}
+@keyframes falling_24 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 946px; opacity: 0.0; width: 30px; transform: rotate(-17deg); }
+}
+@keyframes falling_25 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 760px; opacity: 0.0; width: 30px; transform: rotate(20deg); }
+}
+@keyframes falling_26 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1351px; opacity: 0.0; width: 30px; transform: rotate(-72deg); }
+}
+@keyframes falling_27 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1336px; opacity: 0.0; width: 30px; transform: rotate(55deg); }
+}
+@keyframes falling_28 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1356px; opacity: 0.0; width: 30px; transform: rotate(19deg); }
+}
+@keyframes falling_29 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 999px; opacity: 0.0; width: 30px; transform: rotate(14deg); }
+}
+@keyframes falling_30 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1070px; opacity: 0.0; width: 30px; transform: rotate(43deg); }
+}
+@keyframes falling_31 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 824px; opacity: 0.0; width: 30px; transform: rotate(75deg); }
+}
+@keyframes falling_32 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1073px; opacity: 0.0; width: 30px; transform: rotate(-63deg); }
+}
+@keyframes falling_33 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 896px; opacity: 0.0; width: 30px; transform: rotate(-24deg); }
+}
+@keyframes falling_34 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1137px; opacity: 0.0; width: 30px; transform: rotate(18deg); }
+}
+@keyframes falling_35 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1218px; opacity: 0.0; width: 30px; transform: rotate(15deg); }
+}
+@keyframes falling_36 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1249px; opacity: 0.0; width: 30px; transform: rotate(-49deg); }
+}
+@keyframes falling_37 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 915px; opacity: 0.0; width: 30px; transform: rotate(-24deg); }
+}
+@keyframes falling_38 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 911px; opacity: 0.0; width: 30px; transform: rotate(-66deg); }
+}
+@keyframes falling_39 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1244px; opacity: 0.0; width: 30px; transform: rotate(-11deg); }
+}
+@keyframes falling_40 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1044px; opacity: 0.0; width: 30px; transform: rotate(69deg); }
+}
+@keyframes falling_41 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1399px; opacity: 0.0; width: 30px; transform: rotate(26deg); }
+}
+@keyframes falling_42 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 767px; opacity: 0.0; width: 30px; transform: rotate(-22deg); }
+}
+@keyframes falling_43 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1282px; opacity: 0.0; width: 30px; transform: rotate(-43deg); }
+}
+@keyframes falling_44 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 968px; opacity: 0.0; width: 30px; transform: rotate(42deg); }
+}
+@keyframes falling_45 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 890px; opacity: 0.0; width: 30px; transform: rotate(56deg); }
+}
+@keyframes falling_46 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 836px; opacity: 0.0; width: 30px; transform: rotate(-45deg); }
+}
+@keyframes falling_47 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 868px; opacity: 0.0; width: 30px; transform: rotate(-75deg); }
+}
+@keyframes falling_48 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 923px; opacity: 0.0; width: 30px; transform: rotate(-74deg); }
+}
+@keyframes falling_49 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1396px; opacity: 0.0; width: 30px; transform: rotate(23deg); }
+}
+@keyframes falling_50 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 914px; opacity: 0.0; width: 30px; transform: rotate(54deg); }
+}
+@keyframes falling_51 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1140px; opacity: 0.0; width: 30px; transform: rotate(-45deg); }
+}
+@keyframes falling_52 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1270px; opacity: 0.0; width: 30px; transform: rotate(-76deg); }
+}
+@keyframes falling_53 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1289px; opacity: 0.0; width: 30px; transform: rotate(31deg); }
+}
+@keyframes falling_54 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1180px; opacity: 0.0; width: 30px; transform: rotate(78deg); }
+}
+@keyframes falling_55 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1097px; opacity: 0.0; width: 30px; transform: rotate(10deg); }
+}
+@keyframes falling_56 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1313px; opacity: 0.0; width: 30px; transform: rotate(38deg); }
+}
+@keyframes falling_57 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 1357px; opacity: 0.0; width: 30px; transform: rotate(25deg); }
+}
+@keyframes falling_58 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 995px; opacity: 0.0; width: 30px; transform: rotate(-19deg); }
+}
+@keyframes falling_59 {
+    from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
+    to { top: 775px; opacity: 0.0; width: 30px; transform: rotate(35deg); }
+}

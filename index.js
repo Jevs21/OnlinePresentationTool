@@ -40,6 +40,12 @@ app.get("/", (req, res) => {
 app.get("/assets/:filename", (req, res) => {
     res.sendFile(path.join(__dirname + '/static/assets/' + req.params.filename));
 });
+app.get("/style/:filename", (req, res) => {
+    res.sendFile(path.join(__dirname + '/static/style/' + req.params.filename));
+});
+app.get("/script/:filename", (req, res) => {
+    res.sendFile(path.join(__dirname + '/static/script/' + req.params.filename));
+});
 
 
 app.get('/:endpoint', (req,res) => {

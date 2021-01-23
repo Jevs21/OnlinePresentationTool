@@ -7,88 +7,24 @@
         <meta charset="utf-8">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        <style>
-            #container {
-                height: 100vh;
-                width: 100vw;
-                background-color: bisque;
-            }
-
-            #button_container {
-                padding-top: 40vh;
-                text-align: center;
-            }
-
-            .button_img {
-                cursor: pointer;
-                display: inline-block;
-                width: 40%;
-                height: auto;
-                opacity: 1;
-            }
-            .button_img:hover {
-                cursor: pointer;
-                opacity: 0.9;
-            }
-            .button_img:active {
-                cursor: pointer;
-                opacity: 0.7;
-            }
-            
-            @keyframes falling_k1 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
-                to { top: 1000px;   opacity: 0.0; width: 30px; transform: rotate(-30deg); }
-            }
-            @keyframes falling_k2 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg);}
-                to { top: 750px;    opacity: 0.0; width: 30px; transform: rotate(30deg); }
-            }
-            @keyframes falling_k3 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
-                to { top: 900px;    opacity: 0.0; width: 30px; transform: rotate(-20deg); }
-            }
-            @keyframes falling_k4 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
-                to { top: 820px;    opacity: 0.0; width: 30px; transform: rotate(20deg); }
-            }
-            @keyframes falling_k5 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
-                to { top: 1200px;   opacity: 0.0; width: 30px; transform: rotate(-40deg); }
-            }
-            @keyframes falling_k6 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
-                to { top: 690px;    opacity: 0.0; width: 30px; transform: rotate(40deg); }
-            }
-            @keyframes falling_k7 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
-                to { top: 1120px;   opacity: 0.0; width: 30px; transform: rotate(-50deg); }
-            }
-            @keyframes falling_k8 {
-                from { top: -100px; opacity: 0.9; width: 50px; transform: rotate(0deg); }
-                to { top: 992px;    opacity: 0.0; width: 30px; transform: rotate(50deg); }
-            }
-
-            .temp_img {
-                position: absolute;
-                top: -100px;
-                width: 50px;
-                opacity: 0.9;
-                transform: rotate(0deg);
-            }
-        </style>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/animations.css">
     </head>
     <body>
         <div id="container" class="container-fluid">
             <div class="row">
-                <div class="col-sm-1 col-md-2 col-lg-4"></div>
-                <div class="col-sm-10 col-md-8 col-lg-4">
+                <div class="col-sm-1 col-md-2 col-lg-3 col-xl-4"></div>
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4">
                     <div id="button_container">
-                        <img id="like_button" class='button_img' src="assets/like.svg">
+                        <img id="yes_button" class='button_img' src="assets/yes.svg">
+                        <img id="no_button" class='button_img' src="assets/no.svg">
                         <img id="love_button" class='button_img' src="assets/love.svg">
+                        <img id="laugh_button" class='button_img' src="assets/laugh.svg">
+                        <img id="wow_button" class='button_img' src="assets/wow.svg">
+                        <img id="confused_button" class='button_img' src="assets/confused.svg">
                     </div>
                 </div>
-                <div class="col-sm-1 col-md-2 col-lg-4"></div>
+                <div class="col-sm-1 col-md-2 col-lg-3 col-xl-4"></div>
             </div>
             
         </div>
@@ -96,77 +32,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function() {
-                function sendButtonPress(img) {
-                    $.ajax({
-                        method: 'GET',
-                        url: '/button_pressed',
-                        data: {
-                            image: img
-                        } 
-                    })
-                }
-                $("#like_button").click(() => { sendButtonPress("like") });
-
-                $("#love_button").click(() => { sendButtonPress("love") });
-            });
-        </script>
-        <script>
-
-            function getRandomInt(max) {
-                return Math.floor(Math.random() * Math.floor(max));
-            }
-
-            function clearTempImgs(img_num) {
-                $(`.t_id_${img_num}`).remove();
-            }
-
-            function placeTempImgs(queue, img_num) {
-                console.log("queue len: " + queue.length)
-                let container = $('#container');
-
-                let limit = 100;
-                let exit_i = 0;
-                for (let image of queue) {
-                    if (exit_i > limit) {
-                        break;
-                    }
-                    exit_i++;
-                    for (let i = 0; i < 10; i++) {
-                        let top_val = getRandomInt(150)
-                        let left_val = getRandomInt(container.width())
-                        let falling_anim = getRandomInt(7) + 1 // Make this better
-                        let anim_duration = getRandomInt(2) + 3
-
-                        container.append(`<img class='temp_img t_id_${img_num}' style='left: ${left_val}px; animation: falling_k${falling_anim} ${anim_duration}s;' src='assets/${image}.svg'>`);
-                    }
-                }
-                
-            }
-
-            let IMG_NUM = 0
-
-            setInterval(function(){ 
-                $.ajax({
-                    method: 'GET',
-                    url: '/poll_for_reactions'
-                })
-                .done((data) => {
-                    console.log(data);
-                    if (IMG_NUM > 9) {
-                        clearTempImgs(IMG_NUM - 10);
-                    }
-                    placeTempImgs(data, IMG_NUM);
-                    IMG_NUM++;
-                })
-                .fail((err) => {
-                    console.log("ERROR");
-                    console.log(err);
-                })
-
-                //  
-            }, 1000);
-        </script>
+        <script src="script/button_script.js"></script>
+        <script src="script/background_script.js"></script>
     </body>
 </html>

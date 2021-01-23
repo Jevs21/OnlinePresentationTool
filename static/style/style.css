@@ -1,0 +1,43 @@
+#container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(253, 246, 238);
+}
+
+#button_container {
+    padding-top: 30vh;
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    #button_container {
+        padding-top: 20vh;
+    }
+}
+
+.button_img {
+    cursor: pointer;
+    display: inline-block;
+    width: 28%;
+    height: auto;
+    opacity: 1;
+}
+.button_img:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+.button_img:active {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+.temp_img {
+    position: absolute;
+    top: -100px;
+    width: 50px;
+    opacity: 0.9;
+    transform: rotate(0deg);
+}
+
+
