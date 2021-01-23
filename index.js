@@ -24,9 +24,11 @@ app.get('/button_pressed', (req, res) => {
 
 app.get('/poll_for_reactions', (req, res) => {
     res.send(image_queue)
-    image_queue = []
-})
+});
 
+setInterval(function () {
+    image_queue = []
+}, 1000);
 
 //
 // STATIC FILES

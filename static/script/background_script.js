@@ -2,6 +2,24 @@ $(document).ready(function () {
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
+
+    function generateTempImg(n, img, screen_width, loc = "center") {
+        let left_val = 0
+        let falling_anim = getRandomInt(60) // Make this better
+        let anim_duration = getRandomInt(3) + 4 // Between 4 and 7s
+
+        if (loc == "left") {
+            left_val = getRandomInt(300)
+        }
+        else if (loc == "right") {
+            left_val = getRandomInt(300) + (Math.floor(screen_width) - 300)
+        }
+        else {
+            left_val = getRandomInt(screen_width)
+        }
+
+        return `<img class='temp_img t_id_${n}' style='left: ${left_val}px; animation: falling_${falling_anim} ${anim_duration}s;' src='assets/${img}.svg'>`
+    }
     
     function clearTempImgs(img_num) {
         if (img_num >= 0) {
@@ -15,19 +33,21 @@ $(document).ready(function () {
     function placeTempImgs(queue, img_num) {
         let container = $('#container');
     
-        let limit = 100;
+        let limit = 20;
         let exit_i = 0;
         for (let image of queue) {
             if (exit_i > limit) {
                 break;
             }
             exit_i++;
-            for (let i = 0; i < 10; i++) {
-                let left_val = getRandomInt(container.width())
-                let falling_anim = getRandomInt(60) // Make this better
-                let anim_duration = getRandomInt(3) + 2
-    
-                container.append(`<img class='temp_img t_id_${img_num}' style='left: ${left_val}px; animation: falling_${falling_anim} ${anim_duration}s;' src='assets/${image}.svg'>`);
+            for (let i = 0; i < 8; i++) { // 8 random
+                container.append(generateTempImg(img_num, image, container.width()))
+            }
+            for (let i = 0; i < 3; i++) { // 3 in left 300px
+                container.append(generateTempImg(img_num, image, container.width(), "left"))
+            }
+            for (let i = 0; i < 3; i++) { // 3 in right 300px
+                container.append(generateTempImg(img_num, image, container.width(), "right"))
             }
         }
         
