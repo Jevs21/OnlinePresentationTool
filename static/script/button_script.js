@@ -8,7 +8,7 @@ $(document).ready(function() {
             } 
         })
     }
-    
+
     $("#yes_button").click(     () => { sendButtonPress("yes") });
     $("#no_button").click(      () => { sendButtonPress("no") });
     $("#love_button").click(    () => { sendButtonPress("love") });
