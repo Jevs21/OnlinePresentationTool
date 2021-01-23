@@ -2,7 +2,8 @@ const express = require("express");
 const app     = express();
 const path    = require("path");
 
-const portNum = (process.argv[2]) ? process.argv[2] : "8080";
+const ip = (process.argv[2]) ? process.argv[2] : "localhost";
+const portNum = (process.argv[3]) ? process.argv[3] : "8080";
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded());
@@ -48,4 +49,4 @@ app.get('/:endpoint', (req,res) => {
 
 // Replace with environment variable
 app.listen(portNum);
-console.log(`Hosted at: http://192.168.0.24:${portNum}/`);
+console.log(`Hosted at: http://${ip}:${portNum}/`);
