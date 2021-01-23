@@ -28,7 +28,7 @@ app.get('/poll_for_reactions', (req, res) => {
 
 setInterval(function () {
     image_queue = []
-}, 1000);
+}, 2000);
 
 //
 // STATIC FILES

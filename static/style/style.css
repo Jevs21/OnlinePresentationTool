@@ -30,11 +30,12 @@ html {
 }
 .button_img:hover {
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .button_img:active {
     cursor: pointer;
     opacity: 0.7;
+    width:27%;
 }
 
 

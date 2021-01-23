@@ -9,10 +9,10 @@ $(document).ready(function () {
         let anim_duration = getRandomInt(3) + 4 // Between 4 and 7s
 
         if (loc == "left") {
-            left_val = getRandomInt(300)
+            left_val = getRandomInt(200)
         }
         else if (loc == "right") {
-            left_val = getRandomInt(300) + (Math.floor(screen_width) - 300)
+            left_val = getRandomInt(200) + (Math.floor(screen_width) - 200)
         }
         else {
             left_val = getRandomInt(screen_width)
@@ -33,20 +33,20 @@ $(document).ready(function () {
     function placeTempImgs(queue, img_num) {
         let container = $('#container');
     
-        let limit = 20;
+        let limit = 10;
         let exit_i = 0;
         for (let image of queue) {
             if (exit_i > limit) {
                 break;
             }
             exit_i++;
-            for (let i = 0; i < 8; i++) { // 8 random
+            for (let i = 0; i < 5; i++) { // 5 random
                 container.append(generateTempImg(img_num, image, container.width()))
             }
-            for (let i = 0; i < 3; i++) { // 3 in left 300px
+            for (let i = 0; i < 5; i++) { // 5 in left 300px
                 container.append(generateTempImg(img_num, image, container.width(), "left"))
             }
-            for (let i = 0; i < 3; i++) { // 3 in right 300px
+            for (let i = 0; i < 5; i++) { // 5 in right 300px
                 container.append(generateTempImg(img_num, image, container.width(), "right"))
             }
         }
