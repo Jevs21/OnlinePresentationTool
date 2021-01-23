@@ -113,31 +113,39 @@
             });
         </script>
         <script>
+
             function getRandomInt(max) {
                 return Math.floor(Math.random() * Math.floor(max));
             }
 
-            function clearTempImgs() {
-                $(".temp_img").remove();
+            function clearTempImgs(img_num) {
+                $(`.t_id_${img_num}`).remove();
             }
 
-            function placeTempImgs(queue) {
+            function placeTempImgs(queue, img_num) {
                 console.log("queue len: " + queue.length)
                 let container = $('#container');
 
+                let limit = 100;
+                let exit_i = 0;
                 for (let image of queue) {
+                    if (exit_i > limit) {
+                        break;
+                    }
+                    exit_i++;
                     for (let i = 0; i < 10; i++) {
                         let top_val = getRandomInt(150)
                         let left_val = getRandomInt(container.width())
-                        let falling_anim = getRandomInt(7) + 1
+                        let falling_anim = getRandomInt(7) + 1 // Make this better
                         let anim_duration = getRandomInt(2) + 3
-                        console.log(falling_anim)
 
-                        container.append(`<img class='temp_img' style='left: ${left_val}px; animation: falling_k${falling_anim} ${anim_duration}s;' src='assets/${image}.svg'>`);
+                        container.append(`<img class='temp_img t_id_${img_num}' style='left: ${left_val}px; animation: falling_k${falling_anim} ${anim_duration}s;' src='assets/${image}.svg'>`);
                     }
                 }
                 
             }
+
+            let IMG_NUM = 0
 
             setInterval(function(){ 
                 $.ajax({
@@ -146,8 +154,11 @@
                 })
                 .done((data) => {
                     console.log(data);
-                    clearTempImgs();
-                    placeTempImgs(data);
+                    if (IMG_NUM > 9) {
+                        clearTempImgs(IMG_NUM - 10);
+                    }
+                    placeTempImgs(data, IMG_NUM);
+                    IMG_NUM++;
                 })
                 .fail((err) => {
                     console.log("ERROR");
@@ -155,7 +166,7 @@
                 })
 
                 //  
-            }, 5000);
+            }, 1000);
         </script>
     </body>
 </html>
